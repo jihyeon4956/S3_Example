@@ -42,7 +42,6 @@ public class MenuController {
     @PutMapping("/menus/{id}")
     public MemuResponseDto updateMenu(@PathVariable Long id,
                                       @RequestParam(value = "image") MultipartFile newImage,
-                                      @ModelAttribute MenuRequestDto requestDto,
                                       @RequestParam("name") String name,
                                       @RequestParam("cost") int cost) throws IOException {
         return menuService.update(id, newImage, name, cost);
